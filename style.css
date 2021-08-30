@@ -1,0 +1,149 @@
+body, html {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 0.95em;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+   
+  a:active, a:focus {outline: none;}
+   
+  main {
+    margin: 0em 0em;
+    line-height: 180%;
+  }
+  /*------------------------------*/
+   
+  main h1{
+      text-align: center;
+  }
+
+  section h2{
+      text-align: center;
+  }
+
+  section{
+      background-color: grey;
+      padding: 0px 15px;
+  }
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color: grey;
+    border:solid 2px black;
+    padding:25px 25px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav h2{
+      text-align: left;
+    margin: 0px;
+    width: 150px;
+  }
+   
+  nav ul {
+    margin: 0;
+    padding: 8.1em 0 0 0;
+  }
+   
+  nav ul li {
+    list-style: none;
+    margin: 0;
+  }
+   
+  nav ul.menu li a:hover {
+    color: #03405f;
+    border-bottom: 2px solid #03405f;
+  }
+
+@media screen and (min-width: 961px) {
+    nav ul{
+        display: none;
+    }
+    nav a{
+        display: none;
+    }
+  }
+
+@media screen and (max-width: 960px) {
+    section{
+        margin: 0px 40px;
+    }
+    
+    /*Formatierung Mobiles Menue*/
+    nav ul {
+      top: 5em;
+      position: absolute;
+      width: 100%;
+      left: -100%;
+   
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+   
+      -webkit-transition: all 0.6s ease;
+      -moz-transition: all 0.6s ease;
+      -o-transition: all 0.6s ease;
+      transition: all 0.6s ease;
+    }
+   
+    nav ul li{
+      display: block;
+      text-align: center;
+      padding: 0em 0.5em;
+      border-bottom: 1px solid #fff;
+      border: solid 2px black;
+    }
+   
+    nav ul li a {
+      color: #555;
+      padding: 1em 0;
+    }
+   
+    nav ul.menu li a:hover {
+      border-bottom: 0;
+    }
+   
+    /*Hamburger-Icon*/
+    nav a#nav-m img,
+    nav a.close img { 
+    width: 40px;
+    height: auto;
+    justify-content: space-between;
+     }
+   
+    nav > .close,
+    nav a#nav-m:target {
+      display: none;
+    }
+   
+    nav a:target ~ ul,
+    nav a:target ~ .close {
+      display: inline-block;
+    }
+    nav a:target ~ ul,
+    nav a:target ~ .close,
+    article{
+        margin-top: 100px;
+    }
+    nav a:target ~ ul,
+    nav a:target ~ .close{
+        margin-top: 5px;
+    }
+
+    nav a:target ~ .close {
+        position: absolute;
+        margin-left: -40px;
+      }
+      nav > .close,
+      nav a#nav-m:target,article {
+          margin-top: 0px;
+      }
+      nav a:target ~ ul {
+        left: 0;
+      }
+    }  
